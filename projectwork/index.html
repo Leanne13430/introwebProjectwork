@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container"> 
+        <!-- search box -->
+        <div class="search-box">
+            <i class='bx bx-map'></i>
+            <input id="locationInput" type="text" placeholder="Enter your location">
+            <button id="searchBtn" class="bx bx-search"></button>
+        </div>
+
+        <!-- favorite location btn-->
+        <div class="favorites-container">
+            <button id="addToFavoritesBtn" class="favorite-btn">Add to Favorites</button>
+        </div>
+
+        <!-- favorite locations menu -->
+        <div class="favorites-menu">
+            <h3>Your Favorite Locations</h3>
+            <ul id="favoritesList"></ul>
+        </div>
+
+        <!-- display the city name -->
+        <div class="city-name" id="cityName">City Name</div>
+
+        <!-- weather display -->
+        <div class="weather-box">
+            <div class="box">
+                <div class="info-weather">
+                    <div class="weather">
+                        <img id="weatherIcon" src="images/cloud.png" alt="Weather Icon">
+                        <p class="temperature" id="temperature">16<span>°C</span></p>
+                        <p class="description" id="description">Broken Clouds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- temperature unit selector -->
+        <div class="unit-switch">
+            <label for="unitSelector">Temperature Unit:</label>
+            <select id="unitSelector">
+                <option value="C">°C</option>
+                <option value="F">°F</option>
+                <option value="K">K</option>
+            </select>
+        </div>
+
+        <!-- weather details -->
+        <div class="weather-details">
+            <div class="humidity">
+                <i class='bx bx-water'></i>
+                <div class="text">
+                    <div class="info-humidity">
+                        <span id="humidity">0%</span>
+                    </div>
+                    <p>Humidity</p>
+                </div>
+            </div>
+
+            <div class="wind">
+                <i class='bx bx-wind'></i>
+                <div class="text">
+                    <div class="info-wind">
+                        <span id="windSpeed">0Km/h</span>
+                    </div>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <div id="forecast" class="forecast"></div>
+
+        <!-- dailyforecast for the next 7 days -->
+        <div id="weatherDetails"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
